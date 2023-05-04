@@ -6,8 +6,8 @@ menu:- nl,nl , 	write('\e[H\e[2J'),
 				write('******************************************************************************************************************'), nl,
 				write('Bem-vindo, sou um assistente de suporte a decisão do meio de transporte indicado para o seu percurso!   '),nl,
 				write('Deseja iniciar?  '),nl,
-				write('1. SIM'), nl,
-				write('2. NAO'), nl,nl,
+				write('1. Sim'), nl,
+				write('2. Nao'), nl,nl,
 				read(X0),
 				((X0 == 1), retractall(fact(_)), retractall(origem(_)), retractall(destino(_)) , questao1;
 				 (X0 == 2), fim).
@@ -21,12 +21,12 @@ fim :- 			write('***************************************************************
 				
 questao1:- 		write('******************************************************************************************************************'), nl,
 				write('Sendo assim, qual sera a origem do seu percurso?'), nl,
-				write('1. braga'), nl,
-				write('2. porto'), nl,
-				write('3. lisboa'), nl,
-				write('4. faro'), nl,
-				write('5. madrid'), nl,
-				write('6. paris'), nl, nl,
+				write('1. Braga'), nl,
+				write('2. Porto'), nl,
+				write('3. Lisboa'), nl,
+				write('4. Faro'), nl,
+				write('5. Madrid'), nl,
+				write('6. Paris'), nl, nl,
 				read(X1), 
 				((X1 == 1), assert(fact(braga)), assert(origem(braga)), questao2;
 				 (X1 == 2), assert(fact(porto)), assert(origem(porto)), questao2;
@@ -39,12 +39,12 @@ questao1:- 		write('************************************************************
 				
 questao2:-      write('******************************************************************************************************************'), nl,
 				write('Qual sera o destino?'), nl, 
-				write('1. braga'), nl,
-				write('2. porto'), nl,
-				write('3. lisboa'), nl,
-				write('4. faro'), nl,
-				write('5. madrid'), nl,
-				write('6. paris'), nl, nl,
+				write('1. Braga'), nl,
+				write('2. Porto'), nl,
+				write('3. Lisboa'), nl,
+				write('4. Faro'), nl,
+				write('5. Madrid'), nl,
+				write('6. Paris'), nl, nl,
 				read(X2), 
 				((X2 == 1), assert(fact(braga)), assert(destino(braga)) ,questao3;
 				 (X2 == 2), assert(fact(porto)), assert(destino(porto)) ,questao3;
@@ -56,10 +56,10 @@ questao2:-      write('*********************************************************
 				 
 				
 questao3:-		write('******************************************************************************************************************'), nl,
-				write('Qual a quantia que esta disposto a gastar?') , nl,
-				write('1. alto'), nl,
-				write('2. medio'), nl,
-				write('3. baixo'), nl, nl,
+				write('Qual o nivel de orcamento que esta disposto a gastar?') , nl,
+				write('1. Alto'), nl,
+				write('2. Medio'), nl,
+				write('3. Baixo'), nl, nl,
 				read(X3), 
 				((X3 == 1), assert(fact(alto)) ,questao4;
 				 (X3 == 2), assert(fact(medio)), questao4;
@@ -67,9 +67,9 @@ questao3:-		write('*************************************************************
 
 questao4:-      write('******************************************************************************************************************'), nl,
 				write('Qual sera a sua disponibilidade?'), nl,
-				write('1. muito'), nl,
-				write('2. pouco'), nl,
-				write('3. mediano'), nl, nl,
+				write('1. Muita'), nl,
+				write('2. Pouca'), nl,
+				write('3. Mediana'), nl, nl,
 				read(X4), 
 				((X4 == 1), assert(fact(muito)), questao5;
 				 (X4 == 2), assert(fact(pouco)), questao5;
@@ -77,9 +77,9 @@ questao4:-      write('*********************************************************
 
 questao5:-      write('******************************************************************************************************************'), nl,
 				write('Qual o nivel de conforto que deseja?'), nl,
-				write('1. avancado'), nl,
-				write('2. intermedio'), nl,
-				write('3. basico'), nl, nl,
+				write('1. Avancado'), nl,
+				write('2. Intermedio'), nl,
+				write('3. Basico'), nl, nl,
 				read(X8), 
 				((X8 == 1), assert(fact(avancado)), questao6;
 				 (X8 == 2), assert(fact(intermedio)), questao6;
@@ -88,9 +88,9 @@ questao5:-      write('*********************************************************
 
 questao6:- 		write('******************************************************************************************************************'), nl,
 		   		write('Deseja utilizar o metodo:'), nl,
-				write('1. forward'), nl,
-				write('2. backward'), nl,
-				write('3. proof'), nl, nl,
+				write('1. Forward'), nl,
+				write('2. Backward'), nl,
+				write('3. Proof'), nl, nl,
 				read(X5),
 				((X5 == 1), viagem;
 				 (X5 == 2), questao7;
