@@ -109,10 +109,10 @@ viagem:-     	write('***********************************************************
 				 
 questao7:-		write('******************************************************************************************************************'), nl,
           	    write('Qual o meio de transporte que acha que vai ser adequado?'), nl,
-				write('1. carro'), nl,
-				write('2. autocarro'), nl,
-				write('3. aviao'), nl,
-				write('4. comboio'), nl, nl,
+				write('1. Carro'), nl,
+				write('2. Autocarro'), nl,
+				write('3. Aviao'), nl,
+				write('4. Comboio'), nl, nl,
 				read(X6),
 				((X6 == 1),  demo(carro);
 				 (X6 == 2),  demo(autocarro);
@@ -123,10 +123,10 @@ questao7:-		write('*************************************************************
  
 questao8:- 		write('******************************************************************************************************************'), nl,
 		   		write('Qual o meio de transporte que acha que vai ser adequado?'), nl,
-           		write('1. carro'), nl,
-		   		write('2. autocarro'), nl,
-		  		write('3. aviao'), nl,
-		  		write('4. comboio'), nl, nl,
+           		write('1. Carro'), nl,
+		   		write('2. Autocarro'), nl,
+		  		write('3. Aviao'), nl,
+		  		write('4. Comboio'), nl, nl,
 				write('******************************************************************************************************************'), nl,
 		  	    read(X7), write("                             Explicacao                               "),nl,
 				((X7 == 1), demo(carro,P), write(P);
