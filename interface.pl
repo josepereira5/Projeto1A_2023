@@ -133,20 +133,7 @@ questao8:- 		write('************************************************************
 				 (X7 == 2), demo(autocarro,P), write(P);
 				 (X7 == 3), demo(aviao,P), write(P);
 				 (X7 == 4),demo(comboio,P), write(P)).
-				 
-
-
-/*viagem_exp:-    write('                                                                                                        '), nl,
-             	demo, origem(X1), destino(X2), findtransporte(X1, X2, Preco, Distancia, Transporte), write('O meio de transporte mais adequado sera o '),
-				write(Transporte), write(' e o preco da sua viagem  entre '), write(X1), 
-			    write(' e '), write(X2), write(' varia entre ' ), write(Preco), write(' e a distancia percorrida sera de '), write(Distancia), write('.').	*/			 
-				 
- 
-				 
-				 
-		
-		   
-				 
+				 						 
 				 
 				 
 				
