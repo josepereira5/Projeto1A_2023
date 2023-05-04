@@ -4,8 +4,8 @@
 
 menu:- nl,nl , 	write('\e[H\e[2J'),
 				write('******************************************************************************************************************'), nl,
-				write('    Bem-vindo, sou um assistente de suporte a decisão do meio de transporte indicado para o seu percurso!   '),nl,
-				write('    Deseja iniciar?  '),nl,
+				write('Bem-vindo, sou um assistente de suporte a decisão do meio de transporte indicado para o seu percurso!   '),nl,
+				write('Deseja iniciar?  '),nl,
 				write('1. SIM'), nl,
 				write('2. NAO'), nl,nl,
 				read(X0),
@@ -100,7 +100,7 @@ questao6:- 		write('************************************************************
 viagem:-     	write('******************************************************************************************************************'), nl,
 			 	write('                                                                                                        '), nl,
 			 	write('                                                                                                        '), nl,
-            	write('            Meio de transporte recomendado                   '), nl, 
+            	write('                                       Resultado obtido                                      '), nl, 
              	demo, origem(X1), destino(X2), findtransporte(X1, X2, Preco, Distancia, Transporte), write('O meio de transporte mais adequado sera o '),
 				write(Transporte), write(' e o preco da sua viagem  entre '), write(X1), 
 			    write(' e '), write(X2), write(' varia entre ' ), write(Preco), write(' e a distancia percorrida sera de '), write(Distancia), write('.').
@@ -129,18 +129,17 @@ questao8:- 		write('************************************************************
 		  		write('4. comboio'), nl, nl,
 				write('******************************************************************************************************************'), nl,
 		  	    read(X7), write("                             Explicacao                               "),nl,
-				((X7 == 1), demo(carro,P), write(P); (not(demo(carro, P)), write('Falso.'), viagem_exp);
-				 (X7 == 2), demo(autocarro,P), write(P); (not(demo(autocarro, P)), write('Falso.'), viagem_exp);
-				 (X7 == 3), demo(aviao,P), write(P); (not(demo(aviao, P)), write('Falso.'), viagem_exp);
-				 (X7 == 4),demo(comboio,P), write(P); (not(demo(comboio, P)), write('Falso.'), viagem_exp)).
+				((X7 == 1), demo(carro,P), write(P);
+				 (X7 == 2), demo(autocarro,P), write(P);
+				 (X7 == 3), demo(aviao,P), write(P);
+				 (X7 == 4),demo(comboio,P), write(P)).
 				 
 
 
-viagem_exp:-    write('                                                                                                        '), nl,
-            	write('Meio de transporte recomendado'), nl, 
+/*viagem_exp:-    write('                                                                                                        '), nl,
              	demo, origem(X1), destino(X2), findtransporte(X1, X2, Preco, Distancia, Transporte), write('O meio de transporte mais adequado sera o '),
 				write(Transporte), write(' e o preco da sua viagem  entre '), write(X1), 
-			    write(' e '), write(X2), write(' varia entre ' ), write(Preco), write(' e a distancia percorrida sera de '), write(Distancia), write('.').				 
+			    write(' e '), write(X2), write(' varia entre ' ), write(Preco), write(' e a distancia percorrida sera de '), write(Distancia), write('.').	*/			 
 				 
  
 				 
