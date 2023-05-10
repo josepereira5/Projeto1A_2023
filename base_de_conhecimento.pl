@@ -1,13 +1,13 @@
 	:- dynamic(fact/1), [backward,forward,proof].
 	/*Origem and destino*/
 	%pontosPartida_pontosChegada: braga, porto , Lisboa, Faro, Madrid , Paris
-	
+
 
 	if braga and porto then curta.
-	if braga and lisboa then razoavel.
-	if braga and faro then longa.
-	if braga and madrid then longa.
-	if braga and paris then longa.
+	if braga and lisboa then semAeroporto_razoavel.
+	if braga and faro then semAeroporto_longa.
+	if braga and madrid then semAeroporto_longa.
+	if braga and paris then semAeroporto_longa.
 	if porto and lisboa then razoavel.
 	if porto and faro then longa.
 	if porto and madrid then longa.
@@ -19,8 +19,75 @@
 	if faro and paris then longa.
 	if madrid and paris then longa.
 
+	%restricao braga
+	
+	if semAeroporto_longa  and basico then semAeroporto_longa_basico.
+	if semAeroporto_longa  and intermedio then semAeroporto_longa_intermedio.
+	if semAeroporto_longa  and avancado then semAeroporto_longa_avancado.
+
+	if semAeroporto_razoavel  and basico then semAeroporto_razoavel_basico.
+	if semAeroporto_razoavel  and intermedio then semAeroporto_razoavel_intermedio.
+	if semAeroporto_razoavel  and avancado then semAeroporto_razoavel_avancado.
+		
+	if semAeroporto_longa_basico and baixo_muito then autocarro.
+	if semAeroporto_longa_basico and baixo_mediano then autocarro.
+	if semAeroporto_longa_basico and baixo_pouco then autocarro.
+	if semAeroporto_longa_basico and medio_muito then comboio.
+    if semAeroporto_longa_basico and medio_pouco then comboio.
+    if semAeroporto_longa_basico and medio_mediano then comboio.
+    if semAeroporto_longa_basico and alto_muito then carro.
+    if semAeroporto_longa_basico and alto_pouco then carro.
+    if semAeroporto_longa_basico and alto_mediano then carro.
+	if semAeroporto_longa_intermedio and baixo_muito then autocarro.
+    if semAeroporto_longa_intermedio and baixo_pouco then autocarro.
+    if semAeroporto_longa_intermedio and baixo_mediano then autocarro.
+	if semAeroporto_longa_intermedio and medio_muito then comboio.
+	if semAeroporto_longa_intermedio and medio_pouco then comboio.
+	if semAeroporto_longa_intermedio and medio_mediano then comboio.
+	if semAeroporto_longa_intermedio and alto_muito then carro.
+	if semAeroporto_longa_intermedio and alto_pouco then carro.
+	if semAeroporto_longa_intermedio and alto_mediano then carro.
+	if semAeroporto_longa_avancado and baixo_muito then autocarro.
+	if semAeroporto_longa_avancado and baixo_pouco then autocarro.
+	if semAeroporto_longa_avancado and baixo_mediano then autocarro.
+	if semAeroporto_longa_avancado and medio_muito then comboio .
+	if semAeroporto_longa_avancado and medio_pouco then carro.
+	if semAeroporto_longa_avancado and medio_mediano then comboio.
+	if semAeroporto_longa_avancado and alto_muito then carro.
+	if semAeroporto_longa_avancado and alto_pouco then carro.
+	if semAeroporto_longa_avancado and alto_mediano then carro.
+	
 
 	
+
+    if semAeroporto_razoavel_basico and baixo_muito then comboio.
+    if semAeroporto_razoavel_basico and baixo_pouco then comboio.
+    if semAeroporto_razoavel_basico and baixo_mediano then comboio.
+	if semAeroporto_razoavel_basico and medio_muito then comboio.
+	if semAeroporto_razoavel_basico and medio_pouco then carro.
+	if semAeroporto_razoavel_basico and medio_mediano then carro.
+	if semAeroporto_razoavel_basico and alto_muito then carro .
+	if semAeroporto_razoavel_basico and alto_pouco then carro.
+	if semAeroporto_razoavel_basico and alto_mediano then carro .
+	if semAeroporto_razoavel_intermedio and baixo_muito then autocarro.
+	if semAeroporto_razoavel_intermedio and baixo_pouco then comboio.
+	if semAeroporto_razoavel_intermedio and baixo_mediano then comboio.
+	if semAeroporto_razoavel_intermedio and medio_muito then comboio.
+	if semAeroporto_razoavel_intermedio and medio_pouco then carro.
+	if semAeroporto_razoavel_intermedio and medio_mediano then comboio.
+	if semAeroporto_razoavel_intermedio and alto_muito then carro.
+	if semAeroporto_razoavel_intermedio and alto_pouco then carro.
+	if semAeroporto_razoavel_intermedio and alto_mediano then carro.
+	if semAeroporto_razoavel_avancado and baixo_muito then autocarro.
+	if semAeroporto_razoavel_avancado and baixo_pouco then comboio.
+	if semAeroporto_razoavel_avancado and baixo_mediano then comboio.
+	if semAeroporto_razoavel_avancado and medio_muito then comboio.
+	if semAeroporto_razoavel_avancado and medio_pouco then carro.
+	if semAeroporto_razoavel_avancado and medio_mediano then comboio.
+	if semAeroporto_razoavel_avancado and alto_muito then carro.
+	if semAeroporto_razoavel_avancado and alto_pouco then comboio.
+	if semAeroporto_razoavel_avancado and alto_mediano then comboio.
+
 	
 	%viagem
 	%distancia: curta, razoavel and longa

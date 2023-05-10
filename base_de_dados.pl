@@ -94,10 +94,8 @@ viagem(carro, paris, faro, '240 a 260 euros', '1922 km').
 viagem(carro, paris, madrid, '350 a 450 euros', '1275 km').
 
 
-viagem(aviao, braga, lisboa, 'Não é possivel', '370 km').
-viagem(aviao, braga, faro, 'Não é possivel', '604 km').
-viagem(aviao, braga, madrid, 'Não é possivel', '573 km').
-viagem(aviao, braga, paris, 'Não é possivel', '56 km').
+
+
 viagem(aviao, porto, lisboa, '15 a 35 euros', '313 km').
 viagem(aviao, porto, faro, '35 a 80 euros', '550 km').
 viagem(aviao, porto, madrid, '50 e 200 euros', '561 km').
